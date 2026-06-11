@@ -1,0 +1,299 @@
+-- Atividade--1
+SELECT *
+FROM Customers
+ORDER BY CustomerName ASC;
+
+-- Atividade--2
+SELECT *
+FROM Customers
+ORDER BY City, CustomerName;
+
+-- Atividade--3
+SELECT *
+FROM Customers
+WHERE Country = 'France'
+ORDER BY PostalCode;
+
+-- Atividade--4
+SELECT *
+FROM Customers
+ORDER BY Country, City;
+
+-- Atividade--5
+SELECT *
+FROM Customers
+WHERE City = 'Berlin'
+ORDER BY CustomerName;
+
+-- Atividade--6 
+SELECT *
+FROM Customers
+WHERE Country = 'USA'
+ORDER BY City DESC;
+
+-- Atividade--7
+-- e ordenar por CustomerID
+SELECT *
+FROM Customers
+WHERE ContactName LIKE 'A%'
+ORDER BY CustomerID;
+
+-- Atividade--8 
+-- e ordenar por PostalCode
+SELECT *
+FROM Customers
+WHERE Country <> 'Canada'
+ORDER BY PostalCode;
+
+-- Atividade--9 
+-- e ordenar por Country
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE '%Shop%'
+ORDER BY Country;
+
+-- Atividade--10
+-- e ordenar por CustomerID em ordem decrescente
+SELECT *
+FROM Customers
+WHERE Country = 'Mexico'
+ORDER BY CustomerID DESC;
+
+-- Atividade--11
+-- e ordenar por CustomerName
+SELECT *
+FROM Customers
+WHERE PostalCode LIKE '1%'
+ORDER BY CustomerName;
+
+-- Atividade--12
+SELECT *
+FROM Customers
+WHERE City = 'Madrid'
+ORDER BY ContactName ASC;
+
+-- Atividade--13
+SELECT *
+FROM Customers
+WHERE City LIKE 'P%'
+ORDER BY Country, CustomerID;
+
+-- Atividade--14
+SELECT *
+FROM Customers
+WHERE City = 'New York'
+ORDER BY CustomerName;
+
+-- Atividade--15
+SELECT *
+FROM Customers
+WHERE Country LIKE '%a'
+ORDER BY City ASC;
+
+-- Atividade--16
+SELECT *
+FROM Customers
+WHERE PostalCode LIKE '5%'
+ORDER BY ContactName DESC;
+
+-- Atividade--17
+SELECT *
+FROM Customers
+ORDER BY PostalCode DESC;
+
+-- Atividade--18
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE '%Ltd'
+ORDER BY Country, City;
+
+-- Atividade--19
+SELECT *
+FROM Customers
+WHERE Country = 'Germany'
+ORDER BY CustomerName;
+
+-- Atividade--20
+SELECT *
+FROM Customers
+WHERE ContactName LIKE '%son%'
+ORDER BY PostalCode;
+
+-- Atividade--21
+SELECT *
+FROM Customers
+WHERE City = 'Tokyo'
+ORDER BY CustomerName DESC;
+
+-- Atividade--22
+SELECT *
+FROM Customers
+WHERE PostalCode LIKE '%00'
+ORDER BY CustomerID;
+
+-- Atividade--23
+SELECT *
+FROM Customers
+WHERE City = 'Paris'
+ORDER BY Country ASC;
+
+-- Atividade--24
+SELECT *
+FROM Customers
+WHERE City LIKE 'S%'
+ORDER BY CustomerName;
+
+-- Atividade--25
+SELECT *
+FROM Customers
+WHERE ContactName LIKE 'J%'
+ORDER BY Country, PostalCode;
+
+-- Atividade--26
+SELECT *
+FROM Customers
+WHERE City <> 'London'
+ORDER BY CustomerID;
+
+-- Atividade--27
+SELECT *
+FROM Customers
+ORDER BY ContactName ASC;
+
+-- Atividade--28
+SELECT *
+FROM Customers
+WHERE Country = 'Canada'
+ORDER BY PostalCode, CustomerName;
+
+-- Atividade--29
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE '%Global%'
+ORDER BY Country;
+
+-- Atividade--30
+SELECT *
+FROM Customers
+WHERE Country LIKE 'I%'
+ORDER BY City;
+
+-- Atividade--31
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE 'T%'
+ORDER BY ContactName DESC;
+
+-- Atividade--32
+SELECT *
+FROM Customers
+WHERE City = 'Chicago'
+ORDER BY PostalCode;
+
+-- Atividade--33
+SELECT *
+FROM Customers
+WHERE Country = 'Italy'
+ORDER BY CustomerName, ContactName;
+
+-- Atividade--34
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE 'B%'
+ORDER BY CustomerID ASC;
+
+-- Atividade--35
+SELECT *
+FROM Customers
+WHERE City LIKE '%o'
+ORDER BY Country;
+
+-- Atividade--36
+SELECT *
+FROM Customers
+WHERE Country = 'Brazil'
+ORDER BY PostalCode, CustomerName;
+
+-- Atividade--37
+SELECT *
+FROM Customers
+WHERE PostalCode LIKE '9%'
+ORDER BY CustomerName DESC;
+
+-- Atividade--38
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE '%Services%'
+ORDER BY ContactName;
+
+--Atividade-- 39
+SELECT *
+FROM Customers
+WHERE Country = 'Spain'
+ORDER BY City;
+
+-- Atividade--40
+SELECT *
+FROM Customers
+WHERE City LIKE 'A%'
+ORDER BY CustomerName, Country;
+
+-- Atividade--41
+SELECT *
+FROM Customers
+WHERE ContactName LIKE '%e'
+ORDER BY PostalCode;
+
+-- Atividade--42
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE '%Group%'
+ORDER BY Country ASC;
+
+-- Atividade--43
+SELECT *
+FROM Customers
+WHERE Country LIKE '%n'
+ORDER BY CustomerName DESC;
+
+-- Atividade--44
+SELECT *
+FROM Customers
+WHERE City LIKE 'L%'
+ORDER BY CustomerID;
+
+-- Atividade--45
+SELECT *
+FROM Customers
+WHERE Country = 'Japan'
+ORDER BY PostalCode DESC;
+
+-- Atividade--46
+SELECT *
+FROM Customers
+WHERE PostalCode LIKE '%5'
+ORDER BY CustomerName, City;
+
+-- Atividade--47
+SELECT *
+FROM Customers
+WHERE Country = 'Germany'
+ORDER BY City;
+
+-- Atividade--48
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE 'C%'
+ORDER BY Country, ContactName;
+
+-- Atividade--49
+SELECT *
+FROM Customers
+WHERE ContactName LIKE '%king%'
+ORDER BY CustomerID;
+
+-- Atividade--50
+SELECT *
+FROM Customers
+WHERE PostalCode LIKE '3%'
+ORDER BY CustomerName, Country;
