@@ -1,0 +1,325 @@
+1
+SELECT TOP 10
+ProductName,
+Price * 2 AS DobroPreco
+FROM Products;
+
+2
+SELECT TOP 5
+CONCAT('O produto ', ProductName, ' custa ', Price, ' euros') AS Descricao
+FROM Products
+ORDER BY Price;
+
+3
+SELECT TOP 15
+OrderDetailID,
+Quantity * 10 AS ValorTotal
+FROM OrderDetails;
+
+4
+SELECT TOP 3
+CONCAT(FirstName, ' ', LastName, ' - Funcionário Senai') AS Funcionario
+FROM Employees;
+
+5
+SELECT TOP 8
+ProductName,
+Price,
+Price * 0.85 AS PrecoComDesconto
+FROM Products
+ORDER BY Price DESC;
+
+6
+SELECT TOP 12
+CONCAT(CustomerName, ' - ', City) AS ClienteCidade
+FROM Customers
+ORDER BY CustomerName;
+
+7
+SELECT TOP 20
+OrderDetailID,
+100 - Quantity AS DiferencaStock
+FROM OrderDetails;
+
+8
+SELECT TOP 5
+CONCAT(CategoryName, ' - ', Description) AS CategoriaDescricao
+FROM Categories;
+
+9
+SELECT TOP 10
+s.SupplierName,
+p.Price * 50 AS Custo50Unidades
+FROM Suppliers s
+JOIN Products p ON s.SupplierID = p.SupplierID;
+
+10
+SELECT TOP 25
+CONCAT(Address, ', ', City, ', ', PostalCode) AS MoradaCompleta
+FROM Customers;
+
+11
+SELECT TOP 5
+City,
+COUNT(*) AS TotalClientes
+FROM Customers
+GROUP BY City
+ORDER BY TotalClientes DESC;
+
+12
+SELECT TOP 3
+CategoryID,
+COUNT(*) AS TotalProdutos
+FROM Products
+GROUP BY CategoryID;
+
+13
+SELECT TOP 5
+EmployeeID,
+COUNT(*) AS TotalEncomendas
+FROM Orders
+GROUP BY EmployeeID
+ORDER BY TotalEncomendas DESC;
+
+14
+SELECT TOP 10
+Country,
+COUNT(*) AS TotalFornecedores
+FROM Suppliers
+GROUP BY Country;
+
+15
+SELECT TOP 15
+OrderID,
+COUNT(DISTINCT ProductID) AS ProdutosDiferentes
+FROM OrderDetails
+GROUP BY OrderID;
+
+16
+SELECT TOP 2
+City,
+COUNT(*) AS TotalTransportadoras
+FROM Shippers
+GROUP BY City;
+
+17
+SELECT TOP 5
+SupplierID,
+COUNT(*) AS TotalProdutos
+FROM Products
+GROUP BY SupplierID;
+
+18
+SELECT TOP 10
+OrderDate,
+COUNT(*) AS TotalEncomendas
+FROM Orders
+GROUP BY OrderDate
+ORDER BY TotalEncomendas DESC;
+
+19
+SELECT TOP 8
+PostalCode,
+COUNT(*) AS TotalClientes
+FROM Customers
+GROUP BY PostalCode;
+
+20
+SELECT COUNT(DISTINCT CategoryID) AS TotalCategorias
+FROM Products;
+
+21
+SELECT Country,
+COUNT(*) AS TotalClientes
+FROM Customers
+GROUP BY Country
+HAVING COUNT(*) > 5;
+
+22
+SELECT EmployeeID,
+COUNT(*) AS TotalEncomendas
+FROM Orders
+GROUP BY EmployeeID
+HAVING COUNT(*) > 10;
+
+23
+SELECT CategoryID,
+COUNT(*) AS TotalProdutos
+FROM Products
+GROUP BY CategoryID
+HAVING COUNT(*) > 12;
+
+24
+SELECT City,
+COUNT(*) AS TotalFornecedores
+FROM Suppliers
+GROUP BY City
+HAVING COUNT(*) = 2;
+
+25
+SELECT OrderID,
+COUNT(DISTINCT ProductID) AS Produtos
+FROM OrderDetails
+GROUP BY OrderID
+HAVING COUNT(DISTINCT ProductID) > 3;
+
+26
+SELECT City,
+COUNT(*) AS TotalClientes
+FROM Customers
+GROUP BY City
+HAVING COUNT(*) > 3;
+
+27
+SELECT SupplierID,
+COUNT(*) AS TotalProdutos
+FROM Products
+GROUP BY SupplierID
+HAVING COUNT(*) < 5;
+
+28
+SELECT CategoryID,
+COUNT(*) AS TotalProdutos
+FROM Products
+GROUP BY CategoryID
+HAVING COUNT(*) =
+(
+SELECT COUNT(*)
+FROM Products p2
+WHERE p2.CategoryID = Products.CategoryID
+);
+
+29
+SELECT YEAR(BirthDate) AS AnoNascimento,
+COUNT(*) AS TotalFuncionarios
+FROM Employees
+GROUP BY YEAR(BirthDate)
+HAVING COUNT(*) > 1;
+
+30
+SELECT Country,
+COUNT(*) AS Total
+FROM Suppliers
+GROUP BY Country
+HAVING COUNT(*) > 1;
+
+31
+SELECT TOP 10 * INTO TopClientes_Senai 
+FROM Customers;
+
+32
+SELECT * INTO ProdutosCaros 
+FROM Products 
+WHERE Price > 50;
+
+33
+SELECT * INTO BackupCategorias 
+FROM Categories;
+
+34
+SELECT LastName, FirstName 
+INTO EquipaVendas 
+FROM Employees;
+
+35
+SELECT TOP 20 * INTO EncomendasRecentes 
+FROM Orders 
+ORDER BY OrderDate DESC;
+
+36
+SELECT * INTO FornecedoresNacionais 
+FROM Suppliers 
+WHERE City = 'London';
+
+37
+SELECT ShipperName, Phone 
+INTO ContactosTransporte 
+FROM Shippers;
+
+38
+SELECT * INTO DetalhesGrandes 
+FROM OrderDetails 
+WHERE Quantity > 50;
+
+39
+SELECT CustomerName, ContactName 
+INTO MailingList 
+FROM Customers;
+
+40
+SELECT * INTO ProdutosInativos 
+FROM Products 
+WHERE Price = 0 OR Price IS NULL; 
+
+41
+SELECT TOP 3
+CONCAT('Categoria Nº ', CategoryID) AS Categoria,
+COUNT(*) AS TotalProdutos
+FROM Products
+GROUP BY CategoryID
+HAVING COUNT(*) > 5
+ORDER BY TotalProdutos DESC;
+
+42
+SELECT OrderID,
+SUM(Quantity) AS TotalItens
+FROM OrderDetails
+GROUP BY OrderID;
+
+43
+SELECT TOP 5
+CONCAT(FirstName, ' ', LastName) AS Funcionario
+FROM Employees
+ORDER BY BirthDate;
+
+44
+SELECT TOP 5
+City,
+COUNT(*) AS TotalClientes
+FROM Customers
+GROUP BY City
+HAVING COUNT(*) > 2
+ORDER BY TotalClientes DESC;
+
+45
+SELECT TOP 15
+CONCAT('Produto: ', ProductName, ' IVA: ', Price * 0.23) AS ProdutoIVA
+FROM Products;
+
+46
+SELECT ProductID,
+AVG(Quantity) AS MediaQuantidade
+FROM OrderDetails
+GROUP BY ProductID
+HAVING AVG(Quantity) > 20;
+
+47
+SELECT TOP 10
+CONCAT(SupplierName, ' - ', ContactName) AS ContactoFornecedor
+FROM Suppliers;
+
+48
+SELECT EmployeeID,
+COUNT(*) AS TotalEncomendas
+FROM Orders
+GROUP BY EmployeeID
+HAVING COUNT(*) * 2 > 50;
+
+49
+SELECT TOP 2
+ShipperID,
+COUNT(*) AS ResumoTransportes
+FROM Orders
+GROUP BY ShipperID
+ORDER BY ResumoTransportes DESC;
+
+50
+SELECT TOP 3
+CONCAT(e.FirstName, ' ', e.LastName) AS Funcionario,
+COUNT(o.OrderID) AS TotalEncomendas
+INTO RelatorioFinal
+FROM Employees e
+JOIN Orders o ON e.EmployeeID = o.EmployeeID
+GROUP BY e.EmployeeID, e.FirstName, e.LastName
+HAVING COUNT(o.OrderID) > 5
+ORDER BY TotalEncomendas DESC;
