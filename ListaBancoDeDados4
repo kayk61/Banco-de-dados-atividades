@@ -1,0 +1,113 @@
+SELECT ProductID,Quantity
+FROM OrderDetails
+WHERE Quantity < 10 OR ProductID > 20
+ORDER BY OrderDetailID;
+
+SELECT OrderID,ProductID
+FROM OrderDetails
+WHERE OrderID = 100 OR ProductID %5 = 0
+ORDER BY Quantity;
+
+SELECT Quantity,OrderDetailID
+FROM OrderDetails
+WHERE OrderDetailID > 50 OR Quantity < 20
+ORDER By OrderID;
+
+/*4 Liste os registros onde ProductID seja menor que 15 ou OrderID termine com 0, ordenados por
+Quantity.*/
+
+SELECT ProductID,OrderID
+from OrderDetails
+WHERE ProductID < 15 OR OrderID like '%0'
+ORDER BY Quantity;
+/*Selecione os registros onde Quantity esteja entre 20 e 50 ou OrderDetailID seja divisível por 3,
+ordenados por OrderID.*/
+SELECT Quantity,OrderDetailID
+FROM OrderDetails
+WHERE Quantity BETWEEN 20 and 50 OR OrderDetailID %3 = 0 
+ORDER BY OrderID;
+/*Filtre os registros onde OrderID seja maior que 200 ou ProductID termine com 7, ordenados
+por Quantity.*/
+SELECT OrderID,ProductID
+FROM OrderDetails
+WHERE OrderID > 200 OR ProductID like '%7'
+ORDER BY Quantity;
+/*Obtenha os registros onde Quantity seja divisível por 4 ou OrderID seja menor que 50,
+ordenados por OrderDetailID.*/
+SELECT Quantity,OrderID
+FROM OrderDetails
+WHERE Quantity %4 = 0 OR OrderID < 50
+ORDER BY OrderDetailID;
+/*Liste os registros onde ProductID seja igual a 8 ou Quantity esteja entre 10 e 30, ordenados por
+OrderID.*/
+SELECT ProductID,Quantity
+FROM OrderDetails
+WHERE ProductID = 8 OR Quantity BETWEEN 10 AND 30
+ORDER BY OrderID;
+
+/*Selecione todos os registros onde OrderDetailID termine com 5 ou ProductID seja maior que
+25, ordenados por Quantity.*/
+SELECT OrderDetailID,ProductID
+FROM OrderDetails
+WHERE OrderDetailID like '%5' OR ProductID > 25
+ORDER BY Quantity;
+/*Filtre os registros onde OrderID seja igual a 150 ou Quantity seja menor que 15, ordenados por
+OrderDetailID.*/
+SELECT OrderID,Quantity
+FROM OrderDetails
+WHERE OrderID = 150 OR Quantity < 15
+ORDER BY OrderDetailID;
+/*Selecione os registros onde Quantity seja menor que 50 ou OrderID seja igual a 250,
+ordenados por OrderDetailID.*/
+SELECT Quantity,OrderID
+FROM OrderDetails
+WHERE Quantity < 50 OR OrderID = 250
+ORDER BY OrderDetailID;
+/*Filtre os registros onde ProductID seja maior que 30 ou OrderID esteja entre 100 e 300,
+ordenados por Quantity.*/
+SELECT ProductID,OrderID
+FROM OrderDetails
+WHERE ProductID > 30 OR OrderID BETWEEN 100 AND 300
+ORDER BY Quantity;
+/*Obtenha os registros onde OrderDetailID seja menor que 15 ou Quantity seja divisível por 5,
+ordenados por ProductID.*/
+SELECT OrderDetailID,Quantity
+FROM OrderDetails
+WHERE OrderDetailID < 15 OR Quantity %5 = 0 
+ORDER BY ProductID;
+/*Liste os registros onde ProductID seja menor que 12 ou OrderID termine em 9, ordenados por
+Quantity.*/
+SELECT ProductID,OrderID
+FROM OrderDetails
+WHERE ProductID < 12 OR orderID like '%9'
+ORDER BY Quantity;
+/*Selecione os registros onde Quantity seja maior que 25 ou OrderID seja divisível por 4,
+ordenados por OrderDetailID.*/
+SELECT Quantity,OrderID
+FROM OrderDetails
+WHERE Quantity > 25 OR OrderID %4 = 0 
+ORDER BY OrderDetailID;
+/*Liste os registros onde ProductID seja igual a 45 ou OrderID seja menor que 200, ordenados
+por Quantity.*/
+SELECT ProductID,OrderID
+FROM OrderDetails
+WHERE ProductID = 45 OR OrderId < 200
+ORDER BY Quantity;
+/*Obtenha os registros onde OrderDetailID seja igual a 50 ou Quantity seja maior que 30,
+ordenados por OrderID.*/
+SELECT OrderDetailID,Quantity
+FROM OrderDetails
+WHERE OrderDetailID = 50 OR Quantity > 30
+ORDER BY OrderID;
+/*18. Filtre os registros onde Quantity seja menor que 5 ou OrderDetailID seja divisível por 6,
+ordenados por ProductID.*/
+SELECT Quantity,OrderDetailID
+FROM OrderDetails
+WHERE Quantity < 5 OR OrderDetailID %6 = 0
+ORDER BY ProductID;
+/*19. Liste os registros onde OrderID seja maior que 10 ou Quantity esteja entre 10 e 20, ordenados
+por Quantity.*/
+SELECT OrderID,Quantity
+FROM OrderDetails
+WHERE OrderID > 10 OR Quantity BETWEEN 10 AND 20
+ORDER BY Quantity;
