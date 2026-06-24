@@ -1,0 +1,248 @@
+-- 1
+SELECT SUM(Quantity) 
+FROM OrderDetails;
+
+-- 2
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID > 10;
+
+-- 3
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID < 100;
+
+-- 4
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID % 2 = 0;
+
+-- 5
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID = 200;
+
+-- 6
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID BETWEEN 5 AND 15;
+
+-- 7
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity > 20;
+
+-- 8
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID % 2 <> 0;
+
+-- 9
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID % 5 = 0;
+
+-- 10
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID BETWEEN 50 AND 100;
+
+-- 11
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity > 15;
+
+-- 12
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID IN (3, 6, 9);
+
+-- 13
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID LIKE '%0';
+
+-- 14
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID > 20;
+
+-- 15
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID < 30;
+
+-- 16
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity BETWEEN 10 AND 30;
+
+-- 17
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID % 4 = 0;
+
+-- 18
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID NOT IN (1, 2, 3);
+
+-- 19
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID > 200;
+
+-- 20
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID LIKE '1%';
+
+-- 21
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID % 7 = 0;
+
+-- 22
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID LIKE '%5';
+
+-- 23
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity < 12;
+
+-- 24
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID = 300;
+
+-- 25
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID BETWEEN 15 AND 25;
+
+-- 26
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID % 2 <> 0;
+
+-- 27
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID > 50;
+
+-- 28
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity BETWEEN 5 AND 20;
+
+-- 29
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID < 10;
+
+-- 30
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID > 100;
+
+-- 31
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID IN (2, 4, 8);
+
+-- 32
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID LIKE '3%';
+
+-- 33
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity % 10 = 0;
+
+-- 34
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID > 250;
+
+-- 35
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID LIKE '%6';
+
+-- 36
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID < 50;
+
+-- 37
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID > 30;
+
+-- 38
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID > 400;
+
+-- 39
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID BETWEEN 20 AND 60;
+
+-- 40
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity > 18;
+
+-- 41
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID % 9 = 0;
+
+-- 42
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID < 150;
+
+-- 43
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity BETWEEN 25 AND 40;
+
+-- 44
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID = 7;
+
+-- 45
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID > 400;
+
+-- 46
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID LIKE '%9';
+
+-- 47
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderID % 5 = 0;
+
+-- 48
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE Quantity BETWEEN 20 AND 50;
+
+-- 49
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE ProductID < 12;
+
+-- 50
+SELECT SUM(Quantity) 
+FROM OrderDetails 
+WHERE OrderDetailID BETWEEN 100 AND 300;
