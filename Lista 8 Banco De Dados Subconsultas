@@ -6,3 +6,10 @@ WHERE Price > (SELECT AVG(Price)
 LIMIT 15;
 
 --2
+SELECT CONCAT(FirstName,' ',LastName), BirthDate
+FROM employees
+WHERE BirthDate < (SELECT MAX(BirthDate)
+			 FROM employees)
+LIMIT 5;
+
+--3
