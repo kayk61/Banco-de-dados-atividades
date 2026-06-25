@@ -1,0 +1,8 @@
+--1
+SELECT ProductName,Price
+FROM products
+WHERE Price > (SELECT AVG(Price)
+				FROM products)
+LIMIT 15;
+
+--2
