@@ -1,0 +1,303 @@
+-- Bloco 1
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails LIMIT 5;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity > 10 ORDER BY OrderID LIMIT 3;
+
+SELECT Quantity 
+FROM OrderDetails ORDER BY Quantity DESC LIMIT 7;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE ProductID = 4 LIMIT 10;
+
+SELECT OrderID 
+FROM OrderDetails ORDER BY OrderDetailID ASC LIMIT 2;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails ORDER BY Quantity DESC LIMIT 15;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails ORDER BY Quantity ASC, ProductID LIMIT 20;
+
+SELECT Quantity 
+FROM OrderDetails ORDER BY Quantity DESC, OrderDetailID LIMIT 8;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE ProductID > 3 ORDER BY OrderID LIMIT 5;
+
+SELECT OrderID 
+FROM OrderDetails ORDER BY Quantity, OrderID DESC LIMIT 10;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity < 15 ORDER BY OrderDetailID LIMIT 12;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE ProductID % 2 = 0 ORDER BY Quantity LIMIT 6;
+
+SELECT ProductID 
+FROM OrderDetails ORDER BY ProductID DESC LIMIT 5;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails ORDER BY OrderID, Quantity LIMIT 7;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity < 8 ORDER BY OrderID, ProductID LIMIT 3;
+
+SELECT Quantity 
+FROM OrderDetails ORDER BY Quantity DESC, OrderID LIMIT 9;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderID = 20 LIMIT 2;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity > 25 ORDER BY ProductID LIMIT 10;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderDetailID < 50 ORDER BY Quantity LIMIT 4;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderID BETWEEN 10 AND 30 ORDER BY ProductID LIMIT 6;
+
+SELECT Quantity 
+FROM OrderDetails ORDER BY Quantity DESC, OrderDetailID LIMIT 8;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE ProductID LIKE '%7' ORDER BY OrderID LIMIT 5;
+
+SELECT OrderID 
+FROM OrderDetails WHERE OrderID > 100 ORDER BY Quantity LIMIT 3;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity > 15 ORDER BY OrderDetailID LIMIT 10;
+
+SELECT OrderID 
+FROM OrderDetails ORDER BY OrderID ASC, ProductID LIMIT 12;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE ProductID % 3 = 0 ORDER BY Quantity LIMIT 7;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderDetailID BETWEEN 5 AND 50 ORDER BY OrderID LIMIT 10;
+
+SELECT Quantity 
+FROM OrderDetails ORDER BY Quantity DESC, ProductID LIMIT 6;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE ProductID % 2 <> 0 ORDER BY Quantity LIMIT 4;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderID > 15 ORDER BY ProductID LIMIT 8;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity < 5 ORDER BY OrderID LIMIT 3;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE ProductID % 2 = 0 ORDER BY OrderID LIMIT 5;
+
+SELECT OrderDetailID 
+FROM OrderDetails ORDER BY OrderDetailID DESC LIMIT 10;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity % 5 = 0 ORDER BY ProductID LIMIT 7;
+
+SELECT ProductID 
+FROM OrderDetails ORDER BY ProductID ASC, OrderID LIMIT 2;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderID LIKE '%1' ORDER BY Quantity LIMIT 8;
+
+SELECT OrderID 
+FROM OrderDetails ORDER BY OrderID DESC, OrderDetailID LIMIT 4;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity > 30 ORDER BY ProductID LIMIT 9;
+
+SELECT ProductID 
+FROM OrderDetails ORDER BY ProductID ASC, OrderID LIMIT 5;
+
+SELECT OrderDetailID 
+FROM OrderDetails ORDER BY OrderDetailID DESC, Quantity LIMIT 6;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderID % 2 <> 0 ORDER BY Quantity LIMIT 10;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity = 20 ORDER BY ProductID LIMIT 3;
+
+SELECT OrderDetailID 
+FROM OrderDetails WHERE OrderDetailID < 200 ORDER BY OrderID LIMIT 7;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderID BETWEEN 100 AND 200 ORDER BY ProductID LIMIT 5;
+
+SELECT Quantity 
+FROM OrderDetails ORDER BY Quantity DESC, OrderDetailID LIMIT 12;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE ProductID < 10 ORDER BY OrderID LIMIT 9;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE OrderID LIKE '%0' ORDER BY Quantity LIMIT 2;
+
+SELECT OrderID 
+FROM OrderDetails ORDER BY OrderID ASC, ProductID LIMIT 5;
+
+SELECT OrderDetailID, OrderID, ProductID, Quantity 
+FROM OrderDetails WHERE Quantity % 4 = 0 ORDER BY ProductID LIMIT 6;
+
+SELECT ProductID 
+FROM OrderDetails ORDER BY ProductID DESC, Quantity LIMIT 10;
+
+-- Bloco 2
+
+SELECT AVG(Quantity) 
+FROM OrderDetails;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID > 10;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID = 5;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID < 50;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID > 100;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID % 2 = 0;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID % 2 <> 0;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID BETWEEN 5 AND 15;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID LIKE '%0';
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID BETWEEN 10 AND 30;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity > 25;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity < 10;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID > 7;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID < 20;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity % 5 = 0;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID < 12;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID BETWEEN 15 AND 30;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE CAST(OrderDetailID AS CHAR) LIKE '2%';
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID > 10;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID % 2 <> 0;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID % 3 = 0;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID > 30;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity BETWEEN 10 AND 20;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID LIKE '%5';
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID IN (3, 5, 7);
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity NOT BETWEEN 15 AND 25;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID BETWEEN 5 AND 15;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID = 100;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID BETWEEN 100 AND 200;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity > 20;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID NOT IN (1, 2, 3);
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID LIKE '%2';
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity % 2 = 0;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID > 200;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID = 10;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID BETWEEN 50 AND 100;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE CAST(OrderID AS CHAR) LIKE '1%';
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID % 5 = 0;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity NOT IN (5, 10, 15);
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID < 10;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID > 20;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity = 15;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID IN (10, 20, 30);
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity BETWEEN 5 AND 10;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID NOT LIKE '%3';
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID > 30;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderID < 100;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE ProductID BETWEEN 10 AND 50;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE Quantity % 4 = 0;
+
+SELECT AVG(Quantity) 
+FROM OrderDetails WHERE OrderDetailID LIKE '%0';
